@@ -22,7 +22,7 @@ public class Ejecutor1 {
         
         listaDistancia.add(e1);
         listaDistancia.add(e2);
-        listaDistancia.add(e3);
+        listaDistancia.add(e3); /* darle valores al array list */ 
         
         for (int i = 0; i < listaDistancia.size(); i++) {
             listaDistancia.get(i).calcularMatriculaDistancia();
