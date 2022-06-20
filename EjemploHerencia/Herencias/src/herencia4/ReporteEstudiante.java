@@ -12,6 +12,8 @@ import herencia2.Estudiante;
  * @author reroes
  */
 public class ReporteEstudiante extends Reporte {
+    public ReporteEstudiante(String string) {
+    }
     double promedioMatriculas;
     ArrayList<Estudiante> lista;
     

@@ -13,6 +13,8 @@ import java.util.ArrayList;
  * @author reroes
  */
 public class ReportePolicia extends Reporte{
+    public ReportePolicia(String string) {
+    }
     double promedioEdades;
     ArrayList<Policia> lista;
 }

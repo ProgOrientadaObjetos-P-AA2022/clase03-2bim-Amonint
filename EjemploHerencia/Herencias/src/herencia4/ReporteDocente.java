@@ -13,6 +13,8 @@ import java.util.ArrayList;
  * @author reroes
  */
 public class ReporteDocente extends Reporte{
+    public ReporteDocente(String string) {
+    }
     double promedioSueldos;
     ArrayList<Docente> lista;
 }
