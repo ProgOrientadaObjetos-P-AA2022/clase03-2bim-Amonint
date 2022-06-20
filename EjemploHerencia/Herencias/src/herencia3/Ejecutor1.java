@@ -25,7 +25,7 @@ public class Ejecutor1 {
         listaDistancia.add(e3); /* darle valores al array list */ 
         
         for (int i = 0; i < listaDistancia.size(); i++) {
-            listaDistancia.get(i).calcularMatriculaDistancia();
+            listaDistancia.get(i).calcularMatriculaDistancia(); /* da datos al array de el objeto EstudianteDistancia */
         }
         
         ReporteDistancia rd = new ReporteDistancia("Reporte Distancia", 
