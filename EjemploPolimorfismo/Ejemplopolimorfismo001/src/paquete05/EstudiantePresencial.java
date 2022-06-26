@@ -1,16 +1,6 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-package paquete06;
+package paquete05;
 
 public class EstudiantePresencial extends Estudiante{
-    public EstudiantePresencial(String nombre, String apellido) {
-        super(nombre, apellido);
-        //TODO Auto-generated constructor stub
-    }
-
     /*1.  Declarar
         numeroCreditos: Entero 
         costoCredito: Real 
@@ -47,5 +37,19 @@ public class EstudiantePresencial extends Estudiante{
     public double obtenerCostoCredito(){
         return costoCredito;
     }
-    
+    @Override 
+    public String toString(){
+        String cadena = String.format(""
+                        + "Nombres: %s\n"
+                        + "Apellidos: %s\n"
+                        + "Identificación: %s\n"
+                        + "Edad: %d\n"
+                        + "Costo Matricula: %.2f\n",
+                  obtenerNombresEstudiante(),
+                  obtenerApellidoEstudiante(),
+                  obtenerIdentificacionEstudiante(),
+                  obtenerEdadEstudiante(),
+                  obtenerMatricula()); 
+        return cadena;
+    }
 }
