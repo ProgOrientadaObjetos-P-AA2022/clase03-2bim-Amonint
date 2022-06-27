@@ -3,7 +3,7 @@ package paquete05;
 
 import java.util.ArrayList;
 import java.util.Scanner;
-import paquete04.Estudiante;
+
 
 public class EjecutaEstudiante {
 
@@ -28,9 +28,8 @@ public class EjecutaEstudiante {
 
             System.out.println("Tipo de Estudiante a ingresar\n"
                     + "Ingrese (1) para Estudiante Presencial\n"
-                    + "Ingrese (2) para Estudiante Distancia");
-            tipoEstudiante = entrada.nextInt();
-            entrada.nextLine();
+                    + "Ingrese (2) para Estudiante Distancia\n");
+            tipoEstudiante = Integer.parseInt(entrada.nextLine());
             System.out.println("Ingrese los nombres del estudiante");
             nombresEst = entrada.nextLine();
             System.out.println("Ingrese los apellidos del estudiante");
@@ -38,24 +37,32 @@ public class EjecutaEstudiante {
             System.out.println("Ingrese la identificación del estudiante");
             identificacionEst = entrada.nextLine();
             System.out.println("Ingrese la edad del estudiante");
-            edadEst = entrada.nextInt();
-
+            edadEst = Integer.parseInt(entrada.nextLine());
             if (tipoEstudiante == 1) {
 
+                // Declarar,crear e iniciar objeto tipo EstudiantePresencial
                 EstudiantePresencial estudianteP = new EstudiantePresencial();
+                // Solicitar ingreso de valores para variables 
+                // Solicitar numeroCreds, costoCred
+                // Leer numeroCreds, costoCred
                 System.out.println("Ingrese el número de créditos");
-                numeroCreds = entrada.nextInt();
-                System.out.println("Ingrese el costo de cada crédito");
-                costoCred = entrada.nextDouble();
-
+                numeroCreds = Integer.parseInt(entrada.nextLine());
+                System.out.println("Ingrese el costo de cada créditos");
+                costoCred = Double.parseDouble(entrada.nextLine());
+                // se hace uso de los métodos establecer para asignar valores
+                // a los datos (atributos) del objeto
                 estudianteP.establecerNombresEstudiante(nombresEst);
                 estudianteP.establecerApellidoEstudiante(apellidosEst);
                 estudianteP.establecerIdentificacionEstudiante(identificacionEst);
                 estudianteP.establecerEdadEstudiante(edadEst);
                 estudianteP.establecerNumeroCreditos(numeroCreds);
                 estudianteP.establecerCostoCredito(costoCred);
-
+                // Se agrega al arreglo estudiantes un objeto de tipo
+                // EstudiantePresencial
+//                estudiantes[contador] = estudianteP;
                 estudiantes.add(estudianteP);
+
+        
 
             } else {
 
